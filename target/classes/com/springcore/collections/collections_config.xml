@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+ http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/spring-context.xsd">
+
+  <bean class="com.springcore.collections.Employee" name="employee1" >
+     <property name="name" value="Sumir"/>
+     <property name="phones">
+     <list>
+       <value>45612356</value>
+       <value>5826933</value>
+       <null/>
+     </list>
+     </property>
+     <property name="addresses">
+     <set>
+       <value>Delhi</value>
+       <value>Mumbai</value>
+       <null/>
+     </set>
+     </property>
+     <property name="courses">
+        <map>
+        <entry key="java" value="2 month" />
+        <entry key="reactjs" value="1.5 month" />
+        </map>
+     </property>
+     <property name="crenditals">
+        <props>
+         <prop key="username">Parlok</prop>
+         <prop key="password">Parlok@123</prop>
+        </props>
+     </property>
+     
+  </bean>
+  
+</beans>

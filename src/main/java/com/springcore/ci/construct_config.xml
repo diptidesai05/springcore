@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="
+ http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/spring-context.xsd">
+
+	<bean class="com.springcore.ci.Certi" name="cer"
+		c:name="Full stack 123" />
+
+	<!-- <bean class="com.springcore.ci.Person" name="person1"> <constructor-arg 
+		value="Dipti" /> <constructor-arg value="123456" type="int" /> <constructor-arg 
+		ref="cer" /> </bean> <bean class="com.springcore.ci.Person" name="person1" 
+		c:name="Dipti" c:personid="12346" c:cer="cer" /> -->
+
+	<bean class="com.springcore.ci.Person" name="person1"
+		c:name="Dipti" c:personid="12346" c:cer="cer" c:list="list">
+		<property name="list">
+			<list>
+				<value>1232</value>
+			</list>
+		</property>
+	</bean>
+
+    <bean class="com.springcore.ci.Addition" name="addition1" >
+      <constructor-arg name="a" value="12" type="int" index="1" />
+      <constructor-arg name="b" value="46" type="int" index="0"/>
+      <!-- exception if index of a is put as 1 and index of b is put as 0 -->
+    </bean>
+
+</beans>
